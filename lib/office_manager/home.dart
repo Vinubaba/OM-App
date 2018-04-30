@@ -49,18 +49,18 @@ class HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            _buildBottomNavColumn(Icons.watch_later, "Manage", 0),
-            _buildBottomNavColumn(Icons.send, "Add", 1),
-            _buildBottomNavColumn(Icons.scanner, "Notifications", 2),
-            _buildBottomNavColumn(Icons.account_balance_wallet, "Search", 3),
-            _buildBottomNavColumn(Icons.settings, "Records", 4)
+            _buildBottomNavColumn(Icons.people, "Manage", 0),
+            _buildBottomNavColumn(Icons.add, "Add", 1),
+            _buildBottomNavColumn(Icons.notifications, "Notifications", 2),
+            _buildBottomNavColumn(Icons.search, "Search", 3),
+            _buildBottomNavColumn(Icons.view_list, "Records", 4)
           ],
         ));
   }
 
   Widget _buildBottomNavColumn(IconData icon, String label, int position) {
     final Color _color =
-        position == _currentPage ? Color.fromRGBO(18, 178, 254, 1.0) : Color.fromRGBO(28, 62, 109, 1.0);
+        position == _currentPage ? AppColors.lightBlue : AppColors.darkViolet;
 
     return InkWell(
         onTap: () {
